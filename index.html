@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script src="https://cognizanttechnology7-dev-ed.my.site.com/Customer_Service/lightning/lightning.out.js"></script>
+</head>
+
+<body>
+    <div id="lightningLocator"></div>
+    <script>
+        $Lightning.use("c:OutTestCx",    // name of the Lightning app
+            function() {                  // Callback once framework and app loaded
+                $Lightning.createComponent(
+                    "c:CmpTestCx", // top-level component of your app
+                    { },                  // attributes to set on the component when created
+                    "lightningLocator",   // the DOM location to insert the component
+                    function(cmp) {
+                        // callback when component is created and active on the page
+                    }
+                );
+            },
+            'https://cognizanttechnology7-dev-ed.my.site.com/Customer_Service'  // Experience Cloud site endpoint
+        );
+    </script>
+</body>
+
+
+</html>
